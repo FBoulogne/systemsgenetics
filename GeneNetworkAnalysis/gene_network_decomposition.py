@@ -78,7 +78,7 @@ def main():
             input_file_path=cmd_arguments.input,
             output_dir=cmd_arguments.output,
             analysis_type=cmd_arguments.analysis,
-            over_samples=cmd_arguments.samples,
+            #over_samples=cmd_arguments.samples,
             pca_type=cmd_arguments.pca_type,
             test_run=cmd_arguments.test,
             n_components=cmd_arguments.components,
@@ -124,7 +124,7 @@ def parse_arguments():
                         choices=decomposition_types.values(),
                         help='Select an analyse type')
 
-    parser.add_argument('-p', '--q',
+    parser.add_argument('-p', '--pca_type',
                         required=False,
                         type=str,
                         choices=SVD_types.values(),
